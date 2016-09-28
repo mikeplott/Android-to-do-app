@@ -13,4 +13,12 @@ public class ToDoItem {
         this.isDone = isDone;
     }
 
+    @Override
+    public String toString() {
+        String checkbox = "[ ]";
+        if (isDone) {
+            checkbox = "[x]";
+        }
+        return String.format("%s %s", checkbox, text);
+    }
 }
